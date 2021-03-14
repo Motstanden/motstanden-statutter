@@ -1,0 +1,276 @@
+    \documentclass{article}
+\usepackage[utf8]{inputenc}
+
+% ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+%                           Packages
+% ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{titlesec} % Edits titles and sections
+\usepackage[a4paper]{geometry} % Defines the height and width of the page. 
+\usepackage[strict]{changepage} % allows to dynamic change the width of the page
+\usepackage{enumitem} % Package for enumerate lists
+\usepackage{hyperref} % Enables clickable hyperlinks
+
+% ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+%                       Document setup
+% ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+% Defines the coloring of the urls.
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+% Redefines the title of the table of contents.
+\renewcommand{\contentsname}{Innholdsfortegnelse}
+
+% Declares that there should be no indents when starting new paragraphs.
+\setlength{\parindent}{0pt}
+
+% Redefines the formating of sections, subsections and subsubsections.
+\titleformat{\section}{\normalfont\huge\bfseries}{\thesection.}{23pt}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\S\hspace{4pt}\thesubsection}{16pt}{}{}
+\titleformat{\subsubsection}[runin]{\normalfont}{\textit{\S\hspace{5pt}\thesubsubsection}}{5pt}{}
+
+
+\newenvironment{definition}[1][]
+    {
+        \addtocontents{toc}{\setcounter{tocdepth}{1}}
+        \titleformat{\subsection}[runin]{\normalfont}{\textit{\hspace{1pt}\S\hspace{4pt}\thesubsection}}{0pt}{\rule{12pt}{0pt}}{}
+        \subsection{}#1
+        \begin{minipage}[t]{0.9\linewidth}
+    }
+    {
+        \end{minipage}
+     
+        \ignorespacesafterend
+        \addtocontents{toc}{\setcounter{tocdepth}{2}}
+    }
+
+\newenvironment{statute}[1][]
+    {
+        \titleformat{\subsubsection}[runin]{\normalfont}{\hspace{1pt}\textit{\S\hspace{5pt}\thesubsubsection}}{0pt}{\rule{4pt}{0pt}}{}
+        \subsubsection{}#1
+        \begin{minipage}[t]{0.9\linewidth}
+    }
+    {
+        \end{minipage}
+        
+        \ignorespacesafterend
+    }
+
+\begin{document}%
+
+    % Frontpage
+    \thispagestyle{empty}
+        \hfill
+        \begin{minipage}{\linewidth}
+            \vfill
+            \begin{center}
+                \rule{\linewidth}{0.1em}\\
+                \vspace{0.6\baselineskip}
+                {\Huge Statutter}
+                \rule{\linewidth}{0.1em}
+            \end{center}
+            \begin{minipage}{\linewidth}
+                \includegraphics[width = \linewidth]{images/MotstandenLogo.jpg}
+            \end{minipage}
+        \end{minipage}
+    \newpage
+    
+    \tableofcontents
+    \newpage
+
+    \section{Definisjoner}
+            \begin{definition}
+                Studentorchesteret Den Ohmske Motstanden, heretter kalt Motstanden, er orchesterets navn.
+            \end{definition}
+            \begin{definition}
+                Med medlemskap i Linjeforeningen Elektra menes det fullverdige medlemmer og elektroder i linjeforeningen.
+            \end{definition}
+            \begin{definition}
+                Lambo er en av orchesterets interne skåler som står skrevet i orchesterets sanghefte.
+            \end{definition}
+            \begin{definition}[\label{y_faktor_paragraf}]
+                Y-variabelen er definert som halvparten av gjennomsnittlig antall oppmøtte medlemmer på de tre foregående øvelsene. Y-variabelen rundes alltid av ned til nærmeste heltall. Den matematiske definisjonene av y-variabelen er uttrykt i ligning \ref{y_faktor_ligning}.
+                \begin{equation}\label{y_faktor_ligning}
+                    y(n) = \left\lfloor \frac{n}{2*3} \right\rfloor
+                \end{equation}
+                Hvor:
+                \begin{itemize}
+                    \item $y(n)$ er y-variabelen.
+                    \item $n$ er \textbf{totalt} antall oppmøtende medlemmer de tre foregående øvelsene. 
+                \end{itemize}
+            \end{definition}
+            \begin{definition}[\label{overkvalifisert_flertall}]
+                Overkvalifisert flertall defineres som mer enn $\frac{2}{\pi}$ oppslutning.
+            \end{definition}
+
+    \section{Orchesteret}
+        \subsection{Tilhørighet}
+            \begin{statute}
+                Motstanden er en interessegruppe underlagt Linjeforeningen Elektra.
+            \end{statute}
+        
+        \subsection{Formål}
+            \begin{statute}
+                Formålet med Motstanden er å gi medlemmer av Linjeforeningen Elektra et lavterskel musikalsk- sosialtilbud.
+        \end{statute}
+        
+        \subsection{Medlemskap}
+            \begin{statute}
+                For å bli medlem i Motstanden kreves medlemskap i Linjeforeningen Elektra.
+            \end{statute}
+            \begin{statute}
+                Det kreves ingen kompetanse eller forkunnskaper for å være medlem av Motstanden.
+            \end{statute}
+            \begin{statute}
+                Medlemskap i Motstanden er livsvarig, og det er uavhengig av utløpt eller mistet medlemskap i Linjeforeningen Elektra.            
+            \end{statute}
+        
+        \subsection{Utviselse av medlemmer}
+            \begin{statute}[\label{utvisning}]
+                Et medlem kan utvises ved enstemmig avgjørelse i Motstandens interne styre. Før utvisning skal vedkommende helst få skriftlig advarsel signert av styret.
+            \end{statute}
+            \begin{statute}
+                Vold eller seksuell trakassering er ikke akseptabelt i Motstanden og kan medføre utvisning i henhold til punkt \ref{utvisning}.
+            \end{statute}
+
+
+        \subsection{Orchesterets protokoller}
+            \begin{statute}
+                Ved første mulige arrangement Motstanden arrangerer eller deltar på, må samtlige medlemmer ta lambo dersom Ole (eller et annet medlem) knuser et bord.     
+            \end{statute}
+        
+    \section{Uniform og utstyr}
+        \subsection{Utlån}
+                \begin{statute}
+                    Ved utlåning av instrument og utstyr har man selv ansvar for at det kommer tilbake til Motstandens lager ved endt låneperiode. Låneperiode defineres som det tidspunkt hvor utstyret er utenfor Motstandens lager
+                \end{statute}
+                \begin{statute}
+                    Ved grov uaktsom behandling av instrument og utstyr, kan styret påkreve at vedkommende spiller på vaskebøtte fram til styret ser noe annet hensiktsmessig. 
+                \end{statute}
+
+            
+        \subsection{Kappen}
+                \begin{statute}
+                    Kappen skal være grønn. Det skal være svart kant på den nedre kortsiden, og svart kant på begge langsidene. Både utsiden og innsiden skal ha svart kant, og kanten skal være bredere på innsiden. Utsiden av kappen skal være nøytral. Innsiden kan prydes etter eget ønske. Kappen skal aldri vaskes, men den kan fuktes eller bades med.
+                \end{statute}
+
+        \subsection{Ølfatlen}
+            \begin{statute}
+                Ølfatlen kan utformes etter eget ønske, men det skal være en ølfatle. Ved utforming skal ølfatlen være hvit. Ølfatlen skal aldri vaskes, men den kan kokes suppe på.
+            \end{statute}
+            
+        \subsection{Masken}
+            \begin{statute}
+                Masken skal være grønn og ha svarte kanter. Det er bare tillatt å klippe øyehull når det er ordinær eller ekstraordinær Forohming.
+            \end{statute}
+           
+        \subsection{Hodeplagg}
+            \begin{statute}
+                Hodeplagg er et obligatorisk tillegg til uniformen. Hodeplaggets utforming er valgfri.
+            \end{statute}
+            
+        \subsection{Forbruksmateriell}
+            \begin{statute}
+                Forbruksmateriell, som for eksempel saksofonflis og trommestikker, stiller det enkelte medlem med selv.
+            \end{statute}
+            
+        \subsection{Noter}
+            \begin{statute}
+                Det enkelte medlem har ansvar for å ha egne noter. Notene skal ligge tilgjengelig i Motstandens gjeldende notearkiv.
+            \end{statute}
+            
+    \section{Organisering}
+        \subsection{Motstandens titler}
+            \begin{statute}
+                Motstanden har følgende titler:
+                \begin{enumerate}[font = \bfseries]
+                    \item \textbf{Høyimpedant:} Ærestittel for de som har sittet i styret til Motstanden i to eller flere år.
+                    \item \textbf{Gigaohm:} Sittende- og tidligere ledere for Motstanden.
+                    \item \textbf{Megaohm:} Sittende- og tidligere styremedlemmer i Motstanden.
+                    \item \textbf{Kiloohm:} De som har vært ohmsk i et år.
+                    \item \textbf{Ohm:} Tittel etter gjennomført Forohming.
+                    \item \textbf{Kortsluttning:} Tittel før Forohming
+                \end{enumerate}
+            \end{statute}
+            
+        \subsection{Forohmingen}     
+             \begin{statute}
+                Forohmingen skal avholdes på høstsemesteret før SMASH.
+            \end{statute}
+             \begin{statute}
+                Ved behov, og hvorvidt det er realistisk gjennomførbart, kan ekstraordinær Forohming avholdes på vårsemesteret før SMASH. Ekstraordinær Forohming planlegges av styret.
+             \end{statute}
+             
+    \section{Styret}
+        \subsection{Styrets sammensetning}
+            \begin{statute}
+                Styret i Motstanden består av:
+                \begin{enumerate}[font = \bfseries]
+                    \item Leder
+                    \item Nestleder
+                    \item Økonomiingeniør
+                    \item Musikkingeniør
+                    \item Sosialingeniør
+                    \item Webingeniør
+                \end{enumerate}
+            \end{statute}
+
+        \subsection{Valg av styret}
+            \begin{statute}
+                Styret velges på ordinær eller ekstraordinær generalvorssamling.
+            \end{statute}
+            \begin{statute}
+                Styret innehar stillingen fram til neste ordinære eller ekstraordinære generalvorssamling.
+            \end{statute}
+            
+        \subsection{Stillingsbeskrivelse}
+            \begin{statute}
+                Det gamle styret setter stillingsbeskrivelsen til det nye styret før ordinær generalvorssamling.
+            \end{statute}
+            
+    \section{Generalvorssamling}
+        \subsection{Arrangering av generalvorssamling}
+            \begin{statute}
+                Det skal alltid være tillatt å nyte alkohol på generalvorssamling
+            \end{statute}
+            \begin{statute} 
+                For å avholde generalvorssamling må antall oppmøtende medlemmer overstige y-variabelen som er beskrevet i paragraf \ref{y_faktor_paragraf}.
+            \end{statute}
+            \begin{statute}
+                Generalvorssamling skal avholdes så fort som mulig etter høst-SMASH, senest før november.
+            \end{statute}
+            
+        \subsection{Drikkeprotokoller}
+            \begin{statute}
+                Det skal drikkes hver gang noe vedtas eller avvises på generalvorssamlingen.
+            \end{statute}
+            \begin{statute}
+                Det skal drikkes hver gang noen av følgende ord nevnes på generalvorssamlingen: Volleyball, useriøst, seriøst.
+            \end{statute}
+            
+        \subsection{Skåleprotokoller}
+            \begin{statute}
+                Det skal skåles for alle som blir valgt inn til styret.
+            \end{statute}
+            \begin{statute}
+                Det nye styret tiltrer ikke inn i styrerollen før de har tatt lambo.
+            \end{statute}            
+        \subsection{Endring av statutter}
+            \begin{statute}
+                Statuttendringer kan vedtas ved overkvalifisert flertall i henhold til paragraf  \ref{overkvalifisert_flertall}
+            \end{statute}
+            
+        \subsection{Ekstraordinær generalvorssamling}
+            \begin{statute}
+                Ekstraordinær generalvorssamling kan avholdes dersom styret ønsker det.
+            \end{statute}
+            \begin{statute}
+                Ekstraordinær generalvorssamling kan avholdes dersom det er ønsket av en medlemsmasse som overstiger y-variabelen definert i paragraf \ref{y_faktor_paragraf}.
+            \end{statute}
+\end{document}
