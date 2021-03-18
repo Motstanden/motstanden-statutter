@@ -14,11 +14,11 @@ Denne teksten er delt inn i to deler:
         * [Branch struktur](#branch-struktur)
         * [Gjøre endringer](#gjøre-endringer)
         * [Publisere endringer](#publisere-endringer)
-    * [Kom i gang – lokal redigering](#kom-i-gang-lokal-redigering)
+    * [Kom i gang: lokal redigering](#kom-i-gang-lokal-redigering)
         * [Installer *Tex live*](#installer-tex-live)
         * [Instaler et redigeringsprogram](#instaler-et-redigeringsprogram)
         * [Last ned og rediger](#last-ned-og-rediger.)
-    * [Kom i gang – online redigering](#kom-i-gang-online-redigering)
+    * [Kom i gang: online redigering](#kom-i-gang-online-redigering)
         * [Overleaf](#overleaf)
             * [Importer fra github](#importer-fra-github)
             * [Publisere endringer til github](#publisere-endringer-til-github)
@@ -86,7 +86,7 @@ Alle har lov til å gjøre endringer (på en ny branch) og sette opp en pull req
     * forslag godkjennes ikke før de har blitt vedtatt på generalvorssamling.
     * Endringer i kode godkjennes av webansvarlig i styret.
 
-## Kom i gang – lokal redigering
+## Kom i gang: lokal redigering
 
 ### Installer *Tex live*
 *[Tex live](https://www.tug.org/texlive/)* er en *"latex distribution"*. En latex distribusjon er kort fortalt en samling med programvare som er nødvendig for å kompilere *.tex* filer. Det fins mange latex distribusjoner, men i dette prosjektet bruker vi Tex Live. Tex Live er den mest annerkjente distribusjonen, og er (per 2021) sett på som de facto standard.
@@ -100,10 +100,10 @@ Det fins flere redigeringsprogram for latex, så her står man fritt til å velg
 
 Det er verdt å få med seg at redigeringsprogrammer for latex hovedsakelig er tekstredigeringsverktøy som kaller på API-er i latex distribusjonen du har installert. Under panseret gjør altså latex distribusjonen det meste av arbeidet. Derfor kan ikke et redigeringsprogram stå på egne ben. En latex distribusjon må først være instalert på opperativsystemet.
 
-### Last ned og rediger.
+### Last ned og rediger
 Gratulerer, nå gjenstår det bare å laste ned prosjektet, åpne `statutter.tex`, og å starte å rediger.  
 
-## Kom i gang – online redigering
+## Kom i gang: online redigering
 Det fins flere måter å redigere latex dokumenter i nettlerse på, men *[overleaf](https://www.overleaf.com/)* er den desidert mest brukte og mest populære (per 2021). *Overleaf* koster egentlig penger, men det er gratis dersom man registrerer seg med student–e-posten. 
 
 ### Overleaf
