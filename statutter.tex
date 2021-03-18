@@ -4,17 +4,15 @@
 % ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 %                           Packages
 % ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-\usepackage{natbib}
-\usepackage{graphicx}
+\usepackage[norsk]{babel}
 \usepackage{titlesec} % Edits titles and sections
 \usepackage[a4paper]{geometry} % Defines the height and width of the page. 
-\usepackage[strict]{changepage} % allows to dynamic change the width of the page
 \usepackage{enumitem} % Package for enumerate lists
 \usepackage{hyperref} % Enables clickable hyperlinks
 \usepackage{circuitikz} % Enables drawing electrical circuits
-
-\usepackage{graphicx}
-\usepackage{caption}
+\usepackage{graphicx} % Load images
+\usepackage{caption} % Enables captions in float environments such as minipages
+\usepackage{amsmath} % Improves math environment
 
 % ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 %                       Document setup
@@ -22,10 +20,10 @@
 
 % Defines the coloring of the urls.
 \hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan
 }
 
 % Redefines the title of the table of contents.
@@ -222,55 +220,51 @@
             \begin{statute}[\label{stemt_til_høyimpedant}]
             	Ved ekstraordinær innsats kan et medlem bli stemt inn til å bli Høyimpedant på Motstandens generalvorssamling. Avstemningen krever overkvalifisert flertall i henhold til \S\hspace{3pt}\ref{overkvalifisert_flertall}.
             \end{statute}
-        	\begin{statute}
+        	\begin{statute}[\label{statutt_uforohmet_tittel}]
         		Et uforohmet medlem i Motstandend vil alltid være parallellkoblet med en kortslutning. Dette vil si at Motstandens titler (utover kortsluttning) i \S\hspace{3pt}\ref{motstandens_titler} ikke er gjeldende før medlemmet er forohmet. Se figur \ref{figur_uforohment_tittel}.
         	\end{statute}
         
-
-        	\begin{minipage}{0.1\linewidth}
+        	\begin{minipage}[H]{0.1\linewidth}
         		\hfill
         	\end{minipage}
-      		\begin{minipage}{0.9\linewidth}
+      		\begin{minipage}[H]{0.9\linewidth}
+      			\captionsetup{type=figure}
       			\centering
 	       		\begin{minipage}{0.45\linewidth}
 	       			\vspace{\baselineskip}
 					\centering
-					
 		            \begin{circuitikz}[scale=1.5]
 		            	\coordinate (r-medlem-start) at (3,0);
 		            	\coordinate (r-medlem-slutt) at (3,2);
-		            	
-		            	\draw (r-medlem-start) to [short, o-] (0,0) 
-		            	to [short] (0,2) 
-		            	to [short, -o] (r-medlem-slutt);
-		            	%to [open, l^=$R_{medlem}{=}0$] (r-medlem-start);
-		            	\draw (1,0) to[R, l_=$R_{tittel}$] (1,2);
-		
-		            	\node at (3,1) {$R_{medlem}=0$};	
+		            	\draw (r-medlem-start) 
+			            	to [short, o-] (0,0) 
+			            	to [R, l_=$R_{\text{tittel}}$] (0,2) 
+			            	to [short, -o] (r-medlem-slutt);
+		            	\draw (1.5,0) 
+		            		to [short] (1.5,2);
+		            	\node at (3,1) {$R_{\text{medlem}}=0$};	
 		            \end{circuitikz}
 		            Motstanden av et \\ \textbf{uforohmet} medlem \\
 		            \vspace{\baselineskip}
 	        	\end{minipage}
+        		\hfill
 	        	\begin{minipage}{0.45\linewidth}
 	        		\vspace{\baselineskip}
 	        		\centering
-	        		
 	        		\begin{circuitikz}[scale=1.5]
 	        			\coordinate (r-medlem-start) at (3,0);
-	        			\coordinate (r-medlem-slutt) at (3,2);
-	        			
-	        			\draw (r-medlem-start) to [short, o-] (0,0) 
-	        			(0,0) to[R, l_=$R_{tittel}$] (0,2) 
-	        			to [short, -o] (r-medlem-slutt);
-	        			
-	        			\node at (3,1) {$R_{medlem}=R_{tittel}$};	
+	        			\coordinate (r-medlem-slutt) at (3,2);	
+	        			\draw (r-medlem-start) 
+		        			to [short, o-] (0,0) 
+		        			to[R, l_=$R_{\text{tittel}}$] (0,2) 
+		        			to [short, -o] (r-medlem-slutt);
+	        			\node at (3,1) {$R_{\text{medlem}}=R_{\text{tittel}}$};	
 	        		\end{circuitikz}
 	        		\\ Motstanden av et \\ \textbf{forohmet} medlem \\
 	        		\vspace{\baselineskip}
 	        	\end{minipage}
-        		
         		\centering
-        		\captionof{figure}{}
+        		\caption{Illustrasjon av \S\hspace{3pt}\ref{statutt_uforohmet_tittel}}
         		\label{figur_uforohment_tittel}
 	        \end{minipage}
     
