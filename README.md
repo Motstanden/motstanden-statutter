@@ -1,24 +1,24 @@
 # Introduksjon
 Denne teksten er delt inn i to deler:
-1. [Den første delen](#del-1:-veiledning-for-medlemmer) er skrevet generelt for motstandens medlemmer.
-2. [Den andre delen](#del-2:-veiledning-for-vedlikeholdere) er skrevet for personer som skal gjøre endringer på statuttene. Denne seksjonen er altså ikke nødvendig å lese dersom du ikke skal gjøre endringer på kildekoden.
+1. [Den første delen](#del-1-veiledning-for-medlemmer) er skrevet generelt for motstandens medlemmer.
+2. [Den andre delen](#del-2-veiledning-for-vedlikeholdere) er skrevet for personer som skal gjøre endringer på statuttene. Denne seksjonen er altså ikke nødvendig å lese dersom du ikke skal gjøre endringer på kildekoden.
 
 ## Innholdsfortegnelse
 * [Del 1: Veiledning for medlemmer](#del-1-veiledning-for-medlemmer)
     * [Generelt](#generelt)
     * [Opprett en issue](#opprett-en-issue)
-* [Del 2: Veiledning for vedlikeholdere](#del-2:-veiledning-for-vedlikeholdere)
+* [Del 2: Veiledning for vedlikeholdere](#del-2-veiledning-for-vedlikeholdere)
     * [Arbeidsflyt](#arbeidsflyt)
     * [Retningslinjer](#retningslinjer)
         * [Språk](#språk)
         * [Branch struktur](#branch-struktur)
         * [Gjøre endringer](#gjøre-endringer)
         * [Publisere endringer](#publisere-endringer)
-    * [Kom i gang – lokal redigering](#kom-i-gang-–-lokal-redigering)
+    * [Kom i gang – lokal redigering](#kom-i-gang-lokal-redigering)
         * [Installer *Tex live*](#installer-tex-live)
         * [Instaler et redigeringsprogram](#instaler-et-redigeringsprogram)
         * [Last ned og rediger](#last-ned-og-rediger.)
-    * [Kom i gang – online redigering](#kom-i-gang-–-online-redigering)
+    * [Kom i gang – online redigering](#kom-i-gang-online-redigering)
         * [Overleaf](#overleaf)
             * [Importer fra github](#importer-fra-github)
             * [Publisere endringer til github](#publisere-endringer-til-github)
