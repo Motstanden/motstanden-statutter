@@ -4,7 +4,7 @@ Denne teksten er delt inn i to deler:
 2. [Den andre delen](#del-2:-veiledning-for-vedlikeholdere) er skrevet for personer som skal gjøre endringer på statuttene. Denne seksjonen er altså ikke nødvendig å lese dersom du ikke skal gjøre endringer på kildekoden.
 
 ## Innholdsfortegnelse
-* [Del 1: Veiledning for medlemmer](#del-1:-veiledning-for-medlemmer)
+* [Del 1: Veiledning for medlemmer](#del-1-veiledning-for-medlemmer)
     * [Generelt](#generelt)
     * [Opprett en issue](#opprett-en-issue)
 * [Del 2: Veiledning for vedlikeholdere](#del-2:-veiledning-for-vedlikeholdere)
