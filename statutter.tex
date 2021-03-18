@@ -11,6 +11,10 @@
 \usepackage[strict]{changepage} % allows to dynamic change the width of the page
 \usepackage{enumitem} % Package for enumerate lists
 \usepackage{hyperref} % Enables clickable hyperlinks
+\usepackage{circuitikz} % Enables drawing electrical circuits
+
+\usepackage{graphicx}
+\usepackage{caption}
 
 % ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 %                       Document setup
@@ -219,9 +223,57 @@
             	Ved ekstraordinær innsats kan et medlem bli stemt inn til å bli Høyimpedant på Motstandens generalvorssamling. Avstemningen krever overkvalifisert flertall i henhold til \S\hspace{3pt}\ref{overkvalifisert_flertall}.
             \end{statute}
         	\begin{statute}
-        		Et uforohmet medlem i Motstandend vil alltid være parallellkoblet med en kortslutning. Dette vil si at Motstandens titler (utover kortsluttning) i \S\hspace{3pt}\ref{motstandens_titler} ikke er gjeldende før medlemmet er forohmet.  
+        		Et uforohmet medlem i Motstandend vil alltid være parallellkoblet med en kortslutning. Dette vil si at Motstandens titler (utover kortsluttning) i \S\hspace{3pt}\ref{motstandens_titler} ikke er gjeldende før medlemmet er forohmet. Se figur \ref{figur_uforohment_tittel}.
         	\end{statute}
-            
+        
+
+        	\begin{minipage}{0.1\linewidth}
+        		\hfill
+        	\end{minipage}
+      		\begin{minipage}{0.9\linewidth}
+      			\centering
+	       		\begin{minipage}{0.45\linewidth}
+	       			\vspace{\baselineskip}
+					\centering
+					
+		            \begin{circuitikz}[scale=1.5]
+		            	\coordinate (r-medlem-start) at (3,0);
+		            	\coordinate (r-medlem-slutt) at (3,2);
+		            	
+		            	\draw (r-medlem-start) to [short, o-] (0,0) 
+		            	to [short] (0,2) 
+		            	to [short, -o] (r-medlem-slutt);
+		            	%to [open, l^=$R_{medlem}{=}0$] (r-medlem-start);
+		            	\draw (1,0) to[R, l_=$R_{tittel}$] (1,2);
+		
+		            	\node at (3,1) {$R_{medlem}=0$};	
+		            \end{circuitikz}
+		            Motstanden av et \\ \textbf{uforohmet} medlem \\
+		            \vspace{\baselineskip}
+	        	\end{minipage}
+	        	\begin{minipage}{0.45\linewidth}
+	        		\vspace{\baselineskip}
+	        		\centering
+	        		
+	        		\begin{circuitikz}[scale=1.5]
+	        			\coordinate (r-medlem-start) at (3,0);
+	        			\coordinate (r-medlem-slutt) at (3,2);
+	        			
+	        			\draw (r-medlem-start) to [short, o-] (0,0) 
+	        			(0,0) to[R, l_=$R_{tittel}$] (0,2) 
+	        			to [short, -o] (r-medlem-slutt);
+	        			
+	        			\node at (3,1) {$R_{medlem}=R_{tittel}$};	
+	        		\end{circuitikz}
+	        		\\ Motstanden av et \\ \textbf{forohmet} medlem \\
+	        		\vspace{\baselineskip}
+	        	\end{minipage}
+        		
+        		\centering
+        		\captionof{figure}{}
+        		\label{figur_uforohment_tittel}
+	        \end{minipage}
+    
         \subsection{Forohmingen}     
              \begin{statute}
                 Forohmingen skal avholdes på høstsemesteret før SMASH.
