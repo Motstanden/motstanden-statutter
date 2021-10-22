@@ -1,16 +1,18 @@
-    \documentclass{article}
+\documentclass{article}
 \usepackage[utf8]{inputenc}
 
 % ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 %                           Packages
 % ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-\usepackage{natbib}
-\usepackage{graphicx}
+\usepackage[norsk]{babel}
 \usepackage{titlesec} % Edits titles and sections
 \usepackage[a4paper]{geometry} % Defines the height and width of the page. 
-\usepackage[strict]{changepage} % allows to dynamic change the width of the page
 \usepackage{enumitem} % Package for enumerate lists
 \usepackage{hyperref} % Enables clickable hyperlinks
+\usepackage{circuitikz} % Enables drawing electrical circuits
+\usepackage{graphicx} % Load images
+\usepackage{caption} % Enables captions in float environments such as minipages
+\usepackage{amsmath} % Improves math environment
 
 % ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 %                       Document setup
@@ -18,10 +20,10 @@
 
 % Defines the coloring of the urls.
 \hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan
 }
 
 % Redefines the title of the table of contents.
@@ -34,7 +36,6 @@
 \titleformat{\section}{\normalfont\huge\bfseries}{\thesection.}{23pt}{}
 \titleformat{\subsection}{\normalfont\large\bfseries}{\S\hspace{4pt}\thesubsection}{16pt}{}{}
 \titleformat{\subsubsection}[runin]{\normalfont}{\textit{\S\hspace{5pt}\thesubsubsection}}{5pt}{}
-
 
 \newenvironment{definition}[1][]
     {
@@ -91,6 +92,14 @@
             \begin{definition}
                 Med medlemskap i Linjeforeningen Elektra menes det fullverdige medlemmer og elektroder i linjeforeningen.
             \end{definition}
+        	\begin{definition}
+        		Med medlemskap i Motstanden menes det: 
+        		\begin{itemize}
+        			\item Personer som definerer seg selv som medlem av Motstanden, og som innfrir krav til medlemskap i
+        			\S\hspace{3pt}\ref{medlemskap}.
+        			\item Personer som blir definert av Motstandenstyret til å være medlem av Motstanden, og som innfrir krav til medlemskap i \S\hspace{3pt}\ref{medlemskap}.
+        		\end{itemize}
+        	\end{definition}
             \begin{definition}
                 Lambo er en av orchesterets interne skåler som står skrevet i orchesterets sanghefte.
             \end{definition}
@@ -102,11 +111,11 @@
                 Hvor:
                 \begin{itemize}
                     \item $y(n)$ er y-variabelen.
-                    \item $n$ er \textbf{totalt} antall oppmøtende medlemmer de tre foregående øvelsene. 
+                    \item $n$ er \textbf{totalt} kumulativt antall oppmøtende medlemmer de tre foregående øvelsene. 
                 \end{itemize}
             \end{definition}
             \begin{definition}[\label{overkvalifisert_flertall}]
-                Overkvalifisert flertall defineres som mer enn $\frac{2}{\pi}$ oppslutning.
+                Overkvalifisert flertall defineres som mer enn $\frac{2}{\pi}$ oppslutning av antall oppmøtte på generalvorssamlingen.
             \end{definition}
 
     \section{Orchesteret}
@@ -120,7 +129,8 @@
                 Formålet med Motstanden er å gi medlemmer av Linjeforeningen Elektra et lavterskel musikalsk- sosialtilbud.
         \end{statute}
         
-        \subsection{Medlemskap}
+        
+        \subsection{Medlemskap}\label{medlemskap}
             \begin{statute}
                 For å bli medlem i Motstanden kreves medlemskap i Linjeforeningen Elektra.
             \end{statute}
@@ -128,17 +138,26 @@
                 Det kreves ingen kompetanse eller forkunnskaper for å være medlem av Motstanden.
             \end{statute}
             \begin{statute}
-                Medlemskap i Motstanden er livsvarig, og det er uavhengig av utløpt eller mistet medlemskap i Linjeforeningen Elektra.            
+                Medlemskap i Motstanden er livsvarig, og det er uavhengig av \textbf{utløpt} medlemskap i Linjeforeningen Elektra.            
             \end{statute}
+        	\begin{statute}
+        		Tre måneder etter første deltagelse på arrangement eller øvelse, kreves det medlemskap i 
+        		Motstanden for å videre delta på Motstandens arrangementer og øvelser. Ved spesielle omstendigheter kan dette punktet fravikes dersom det godkjennes av både Motstandenstyret og Elektrastyret. 
+        	\end{statute}
         
         \subsection{Utviselse av medlemmer}
-            \begin{statute}[\label{utvisning}]
+        	\begin{statute}[\label{utvisning_av_elektrastyret}]
+        		Dersom et medlem blir utvist av linjeforeningen Elektra, skal vedkommende også utvises av Motstanden.
+        	\end{statute}
+            \begin{statute}[\label{utvisning_av_styret}]
                 Et medlem kan utvises ved enstemmig avgjørelse i Motstandens interne styre. Før utvisning skal vedkommende helst få skriftlig advarsel signert av styret.
             \end{statute}
             \begin{statute}
-                Vold eller seksuell trakassering er ikke akseptabelt i Motstanden og kan medføre utvisning i henhold til punkt \ref{utvisning}.
+                Vold, seksuell trakassering, og diskriminering er ikke akseptabelt i Motstanden og kan medføre utvisning i henhold til \S\hspace{3pt}\ref{utvisning_av_elektrastyret} eller  \S\hspace{3pt}\ref{utvisning_av_styret}.
             \end{statute}
-
+			\begin{statute}
+				Personer som blir utvist fra Motstanden i henhold til \S\hspace{3pt}\ref{utvisning_av_styret} kan kalle inn til medlemsmøte for å stemme over omgjøring av utvisningen. Det kan ikke kalles inn til et slikt møte dersom fornærmede har innsigelse mot å avholde det.
+			\end{statute}
 
         \subsection{Orchesterets protokoller}
             \begin{statute}
@@ -148,7 +167,7 @@
     \section{Uniform og utstyr}
         \subsection{Utlån}
                 \begin{statute}
-                    Ved utlåning av instrument og utstyr har man selv ansvar for at det kommer tilbake til Motstandens lager ved endt låneperiode. Låneperiode defineres som det tidspunkt hvor utstyret er utenfor Motstandens lager
+                    Ved utlåning av instrument og utstyr har man selv ansvar for at det kommer tilbake til Motstandens lager ved endt låneperiode. Låneperiode defineres som det tidsintervallet hvor utstyret er utenfor Motstandens lager og fram til det er tilbake til lageret.
                 \end{statute}
                 \begin{statute}
                     Ved grov uaktsom behandling av instrument og utstyr, kan styret påkreve at vedkommende spiller på vaskebøtte fram til styret ser noe annet hensiktsmessig. 
@@ -187,10 +206,10 @@
             
     \section{Organisering}
         \subsection{Motstandens titler}
-            \begin{statute}
+            \begin{statute}[\label{motstandens_titler}]
                 Motstanden har følgende titler:
                 \begin{enumerate}[font = \bfseries]
-                    \item \textbf{Høyimpedant:} Ærestittel for de som har sittet i styret til Motstanden i to eller flere år.
+                    \item \textbf{Høyimpedant:} Ærestittel for de som har sittet i styret til Motstanden i to eller flere år, og for de som har utøvet ekstraordinær innsats i henhold til \S\hspace{3pt}\ref{stemt_til_høyimpedant}.
                     \item \textbf{Gigaohm:} Sittende- og tidligere ledere for Motstanden.
                     \item \textbf{Megaohm:} Sittende- og tidligere styremedlemmer i Motstanden.
                     \item \textbf{Kiloohm:} De som har vært ohmsk i et år.
@@ -198,7 +217,57 @@
                     \item \textbf{Kortsluttning:} Tittel før Forohming
                 \end{enumerate}
             \end{statute}
-            
+            \begin{statute}[\label{stemt_til_høyimpedant}]
+            	Ved ekstraordinær innsats kan et medlem bli stemt inn til å bli Høyimpedant på Motstandens generalvorssamling. Avstemningen krever overkvalifisert flertall i henhold til \S\hspace{3pt}\ref{overkvalifisert_flertall}.
+            \end{statute}
+        	\begin{statute}[\label{statutt_uforohmet_tittel}]
+        		Et uforohmet medlem i Motstandend vil alltid være parallellkoblet med en kortslutning. Dette vil si at Motstandens titler (utover kortsluttning) i \S\hspace{3pt}\ref{motstandens_titler} ikke er gjeldende før medlemmet er forohmet. Se figur \ref{figur_uforohment_tittel}.
+        	\end{statute}
+        
+        	\begin{minipage}[H]{0.1\linewidth}
+        		\hfill
+        	\end{minipage}
+      		\begin{minipage}[H]{0.9\linewidth}
+      			\captionsetup{type=figure}
+      			\centering
+	       		\begin{minipage}{0.45\linewidth}
+	       			\vspace{\baselineskip}
+					\centering
+		            \begin{circuitikz}[scale=1.5]
+		            	\coordinate (r-medlem-start) at (3,0);
+		            	\coordinate (r-medlem-slutt) at (3,2);
+		            	\draw (r-medlem-start) 
+			            	to [short, o-] (0,0) 
+			            	to [R, l_=$R_{\text{tittel}}$] (0,2) 
+			            	to [short, -o] (r-medlem-slutt);
+		            	\draw (1.5,0) 
+		            		to [short] (1.5,2);
+		            	\node at (3,1) {$R_{\text{medlem}}=0$};	
+		            \end{circuitikz}
+		            Motstanden av et \\ \textbf{uforohmet} medlem \\
+		            \vspace{\baselineskip}
+	        	\end{minipage}
+        		\hfill
+	        	\begin{minipage}{0.45\linewidth}
+	        		\vspace{\baselineskip}
+	        		\centering
+	        		\begin{circuitikz}[scale=1.5]
+	        			\coordinate (r-medlem-start) at (3,0);
+	        			\coordinate (r-medlem-slutt) at (3,2);	
+	        			\draw (r-medlem-start) 
+		        			to [short, o-] (0,0) 
+		        			to[R, l_=$R_{\text{tittel}}$] (0,2) 
+		        			to [short, -o] (r-medlem-slutt);
+	        			\node at (3,1) {$R_{\text{medlem}}=R_{\text{tittel}}$};	
+	        		\end{circuitikz}
+	        		\\ Motstanden av et \\ \textbf{forohmet} medlem \\
+	        		\vspace{\baselineskip}
+	        	\end{minipage}
+        		\centering
+        		\caption{Illustrasjon av \S\hspace{3pt}\ref{statutt_uforohmet_tittel}}
+        		\label{figur_uforohment_tittel}
+	        \end{minipage}
+    
         \subsection{Forohmingen}     
              \begin{statute}
                 Forohmingen skal avholdes på høstsemesteret før SMASH.
@@ -248,11 +317,14 @@
             
         \subsection{Drikkeprotokoller}
             \begin{statute}
-                Det skal drikkes hver gang noe vedtas eller avvises på generalvorssamlingen.
+                Det skal drikkes hver gang en statutt vedtas eller avvises på generalvorssamlingen.
             \end{statute}
-            \begin{statute}
-                Det skal drikkes hver gang noen av følgende ord nevnes på generalvorssamlingen: Volleyball, useriøst, seriøst.
+            \begin{statute}[\label{drikkeprotokoll_forbudte_ord}]
+                Det skal drikkes hver gang noen av følgende ord nevnes på generalvorssamlingen: Volleyball, useriøst, seriøst, bord, London, Jørgen. Mellom kl 21:00 og 22:00 skal det drikkes hver gang det nevnes: ja, nei.
             \end{statute}
+        	\begin{statute}
+        		Statutt \ref{drikkeprotokoll_forbudte_ord} kan ikke omfatte mer en 8 ord.
+        	\end{statute}
             
         \subsection{Skåleprotokoller}
             \begin{statute}
@@ -263,7 +335,7 @@
             \end{statute}            
         \subsection{Endring av statutter}
             \begin{statute}
-                Statuttendringer kan vedtas ved overkvalifisert flertall i henhold til paragraf  \ref{overkvalifisert_flertall}
+                Statuttendringer kan vedtas ved overkvalifisert flertall i henhold til \S\hspace{3pt}  \ref{overkvalifisert_flertall}
             \end{statute}
             
         \subsection{Ekstraordinær generalvorssamling}
