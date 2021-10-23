@@ -12,3 +12,4 @@
     5. Web
 
 - Kappen skal navngis, og gitt navn skal føres på innsiden av kappekragen etter forohmingen.
+- Lånekapper er for medlemmer av motstanden som ikke har laget sin egen kappe. Denne knappen skal ha sølvgaffakant.
