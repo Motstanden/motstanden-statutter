@@ -13,3 +13,6 @@
 
 - Kappen skal navngis, og gitt navn skal føres på innsiden av kappekragen etter forohmingen.
 - Lånekapper er for medlemmer av motstanden som ikke har laget sin egen kappe. Denne knappen skal ha sølvgaffakant.
+
+Møtekritikk:
+ - Alle er enige om at Siver gjorde en jævlig bra jobb.
