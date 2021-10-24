@@ -15,4 +15,5 @@
 - Lånekapper er for medlemmer av motstanden som ikke har laget sin egen kappe. Denne knappen skal ha sølvgaffakant.
 
 Møtekritikk:
- - Alle er enige om at Siver gjorde en jævlig bra jobb.
+ - Alle er enige om at Sivert gjorde en jævlig bra jobb.
+ - Vi ferdig kl 00:30, i fjor var vi ferdig 04:30. Vi burde øke engasjementet. 
