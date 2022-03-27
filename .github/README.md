@@ -1,12 +1,12 @@
 # Motstandens statutter
 
 ## Generelt
-* Statuttene kan leses i sin helhet i filen: **statuttene.pdf**
-* Endringer etter generalvorsamlinger kan finnes ved å gå inn på **Pull Requests** fanen.
-* Forslag og spørsmål kan legges fram ved å gå inn på **Issues** fanen.
+* Statuttene kan leses i sin helhet i filen: [statutter.pdf](../statutter.pdf)
+* Endringer etter generalvorsamlinger kan finnes ved å gå inn på [Pull Requests](https://github.com/Motstanden/motstandens-statutter/pulls) fanen.
+* Forslag og spørsmål kan legges fram ved å gå inn på [Issues](https://github.com/Motstanden/motstandens-statutter/issues) fanen.
 
 ## Opprett en issue
-Har du et forslag? Eller et spørsmål? Eller noe du vil påpeke til neste genvors? Opprett en *issue* på det! 
+Har du et forslag? Eller et spørsmål? Eller noe du vil påpeke til neste genvors? Opprett en [*issue*](https://github.com/Motstanden/motstandens-statutter/issues) på det! 
 
 På *issues* kan man diskutere absolutt alt som er relatert til statuttene! Der skal det være super-lav terskel for å publisere meninger, forslag, og spørsmål – når som helst! 
 
