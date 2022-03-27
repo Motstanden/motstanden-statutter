@@ -86,77 +86,7 @@
     \newpage
 
     \input{motstanden-statutter/innhold.tex}
-   
-    \section{Organisering}
-        \subsection{Motstandens titler}
-            \begin{statute}[\label{motstandens_titler}]
-                Motstanden har følgende titler:
-                \begin{enumerate}[font = \bfseries]
-                    \item \textbf{Høyimpedant:} Ærestittel for de som har sittet i styret til Motstanden i to eller flere år, og for de som har utøvet ekstraordinær innsats i henhold til \S\hspace{3pt}\ref{stemt_til_høyimpedant}.
-                    \item \textbf{Gigaohm:} Sittende- og tidligere ledere for Motstanden.
-                    \item \textbf{Megaohm:} Sittende- og tidligere styremedlemmer i Motstanden.
-                    \item \textbf{Kiloohm:} De som har vært ohmsk i et år.
-                    \item \textbf{Ohm:} Tittel etter gjennomført Forohming.
-                    \item \textbf{Kortsluttning:} Tittel før Forohming
-                \end{enumerate}
-            \end{statute}
-            \begin{statute}[\label{stemt_til_høyimpedant}]
-            	Ved ekstraordinær innsats kan et medlem bli stemt inn til å bli Høyimpedant på Motstandens generalvorssamling. Avstemningen krever overkvalifisert flertall i henhold til \S\hspace{3pt}\ref{overkvalifisert_flertall}.
-            \end{statute}
-        	\begin{statute}[\label{statutt_uforohmet_tittel}]
-        		Et uforohmet medlem i Motstandend vil alltid være parallellkoblet med en kortslutning. Dette vil si at Motstandens titler (utover kortsluttning) i \S\hspace{3pt}\ref{motstandens_titler} ikke er gjeldende før medlemmet er forohmet. Se figur \ref{figur_uforohment_tittel}.
-        	\end{statute}
         
-            \hfill
-      		\begin{minipage}[H]{0.9\linewidth}
-      			\captionsetup{type=figure}
-      			\centering
-	       		\begin{minipage}{0.475\linewidth}
-	       			\vspace{\baselineskip}
-					\centering
-		            \begin{circuitikz}[scale=1.5]
-		            	\coordinate (r-medlem-start) at (3,0);
-		            	\coordinate (r-medlem-slutt) at (3,2);
-		            	\draw (r-medlem-start) 
-			            	to [short, o-] (0,0) 
-			            	to [R, l_=$R_{\text{tittel}}$] (0,2) 
-			            	to [short, -o] (r-medlem-slutt);
-		            	\draw (1.5,0) 
-		            		to [short] (1.5,2);
-		            	\node at (3,1) {$R_{\text{medlem}}=0$};	
-		            \end{circuitikz}
-		            Motstanden av et \\ \textbf{uforohmet} medlem \\
-		            \vspace{\baselineskip}
-	        	\end{minipage}
-        		\hfill
-	        	\begin{minipage}{0.475\linewidth}
-	        		\vspace{\baselineskip}
-	        		\centering
-	        		\begin{circuitikz}[scale=1.5]
-	        			\coordinate (r-medlem-start) at (3,0);
-	        			\coordinate (r-medlem-slutt) at (3,2);	
-	        			\draw (r-medlem-start) 
-		        			to [short, o-] (0,0) 
-		        			to[R, l_=$R_{\text{tittel}}$] (0,2) 
-		        			to [short, -o] (r-medlem-slutt);
-	        			\node at (3,1) {$R_{\text{medlem}}=R_{\text{tittel}}$};	
-	        		\end{circuitikz}
-	        		\\ Motstanden av et \\ \textbf{forohmet} medlem \\
-	        		\vspace{\baselineskip}
-	        	\end{minipage}
-        		\centering
-        		\caption{Illustrasjon av \S\hspace{3pt}\ref{statutt_uforohmet_tittel}}
-        		\label{figur_uforohment_tittel}
-	        \end{minipage}
-    
-        \subsection{Forohmingen}     
-             \begin{statute}
-                Forohmingen skal avholdes på høstsemesteret før SMASH.
-            \end{statute}
-             \begin{statute}
-                Ved behov, og hvorvidt det er realistisk gjennomførbart, kan ekstraordinær Forohming avholdes på vårsemesteret før SMASH. Ekstraordinær Forohming planlegges av styret.
-             \end{statute}
-             
     \section{Styret}
         \subsection{Styrets sammensetning}
             \begin{statute}
