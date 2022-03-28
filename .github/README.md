@@ -1,7 +1,7 @@
 # Motstandens statutter
 
 ## Generelt
-* Statuttene kan leses i sin helhet i filen: [motstanden-statutter.pdf](../statutter.pdf)
+* Statuttene kan leses i sin helhet i filen: [motstanden-statutter.pdf](../motstanden-statutter.pdf)
 * Endringer etter generalvorsamlinger kan finnes ved å gå inn på [Pull Requests](https://github.com/Motstanden/motstandens-statutter/pulls) fanen.
 * Forslag og spørsmål kan legges fram ved å gå inn på [Issues](https://github.com/Motstanden/motstandens-statutter/issues) fanen.
 
