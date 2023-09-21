@@ -89,7 +89,7 @@ Det fins flere måter å redigere latex dokumenter i nettlesere på, men *[overl
 #### Importer fra github
 Dette gjør du ved å klikke på **New Project > Import from GitHub** (se bildet under). Etter dette må du godta at *overleaf* kan koble seg til github brukeren din.
 
-<img src="readme-images\OverleafImportFromGithub.png" height="200"/>
+<img src="readme-images\overleaf-import-from-github.png" height="200"/>
 
 Du er nå klar for å starte å redigere statuttene.
 
@@ -97,7 +97,7 @@ Du er nå klar for å starte å redigere statuttene.
 
 1. **Sørg for at ALLE feilmeldinger er fikset** (se bildet under). **Det er strengt forbudt å publisere .tex filer med feilmeldinger til github!!** Feilmeldinger vil gjøre at .tex filene ikke kan bli kompilert lokalt på datamaskiner. Uhåndterte feilmeldinger vil derfor ødelegge for andre.
 
-    <img src="readme-images\OverleafWarnings.png" height="100"/>
+    <img src="readme-images\overleaf-warning.png" height="100"/>
 
 2. Last ned de 'gamle statuttene'.
     ``` 
