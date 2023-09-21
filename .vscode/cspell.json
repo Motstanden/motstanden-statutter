@@ -1,0 +1,9 @@
+{
+    // Version of the setting file.  Always 0.2
+    "version": "0.2",
+    "words": [
+        // TODO
+    ],
+    "allowCompoundWords": true
+
+}
