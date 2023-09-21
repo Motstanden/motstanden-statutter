@@ -70,7 +70,7 @@ Alle har lov til å gjøre endringer (på en ny branch) og sette opp en pull req
 ### Installer *Tex live*
 *[Tex live](https://www.tug.org/texlive/)* er en *"latex distribution"*. En latex distribusjon er kort fortalt en samling med programvare som er nødvendig for å kompilere *.tex* filer. Det fins mange latex distribusjoner, men i dette prosjektet bruker vi Tex Live. Tex Live er den mest anerkjente distribusjonen, og er (per 2021) sett på som de facto standard.
 
-Ved å bruke Tex Live sikrer vi at alle jobber i likt miljø. Dermed risikerer man ikke å 'break-e' `.tex` filene for andre som jobber på prosjektet. Dersom du er **latex wizzard**, og har fullstendig peiling på hva du holder på med, kan du velge en annen distribusjon.  
+Ved å bruke Tex Live sikrer vi at alle jobber i likt miljø. Dermed risikerer man ikke å 'break-e' `.tex` filene for andre som jobber på prosjektet. Dersom du er **latex wizard**, og har fullstendig peiling på hva du holder på med, kan du velge en annen distribusjon.  
 
 Last ned Tex Live [her](https://www.tug.org/texlive/acquire-netinstall.html).
 
