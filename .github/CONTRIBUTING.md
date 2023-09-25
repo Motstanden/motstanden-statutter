@@ -22,16 +22,16 @@
 
 ## Arbeidsflyt
 1. Lag ny branch
-    ```
+    ```shell
     git checkout -b genvors/vår-2021
     ```
 2. Gjør endringer, commit, repeat.
-    ```
+    ```shell
     git add .
     git commit -m "Legg til definisjon av en kortslutning"
     ```
 3. Publiser branch på GitHub.
-    ```
+    ```shell
     git push -u origin genvors/høst-2021
     ```
 4. Sett opp en pull request med de nye endringer i henhold til [retningslinjene](#publisere-endringer). 
@@ -100,20 +100,20 @@ Du er nå klar for å starte å redigere statuttene.
     <img src="images\overleaf-warning.png" height="100"/>
 
 2. Last ned de 'gamle statuttene'.
-    ``` 
-    git clone https://github.com/Motstanden/statutter.git
+    ```shell
+    git clone https://github.com/Motstanden/motstanden-statutter.git
     ```
 4. Last ned kildekodefilene fra *Overleaf* ved å klikke på: *Menu > Download > Source*.
 3. Klikk på recompile og last ned pdf versjonen.
 5. Kopier kildekodefilene og pdf dokumentet inn i mappen med de 'gamle statuttene'. Sørg for at de nye filene overskriver de gamle filene.
 7. Lag ny branch og legg til endringene.
-    ```
+    ```shell
     git checkout -b redaksjon/fiks-skrivefeil
     git add .
     git commit -m "Fiks diverse skrivefeil i statuttene"
     ```
 6. Publiser til *GitHub*
-    ```
+    ```shell
     git push -u origin redaksjon/fiks-skrivefeil
     ```
 7. Sett opp en pull request til master på *GitHub*.
@@ -122,20 +122,21 @@ Du er nå klar for å starte å redigere statuttene.
 ### Ny definisjon
 Det er laget et egendefinert miljø for definisjoner (punktene i seksjon 1). Syntaksen for miljøet er:
 
-    ```
-    \begin{definition}[\label{her-kan-du-legge-in-et-label}]
-        Her skriver du selve definisjonen....
-    \end{definition}
-    ```
+```latex
+\begin{definition}[\label{her-kan-du-legge-in-et-label}]
+    Her skriver du selve definisjonen....
+\end{definition}
+```
 Latex vil automatisk håndtere formatering og plassering.
 For å finne definisjonen av miljøet, se etter: `\newenvironment{definition}`
 
 ### Ny statutt
 Det er laget et egendefinert miljø statutter (alle punkter som ikke er definisjoner). Syntaksen er identisk som definisjon miljøet:
 
-    ```
-    \begin{statute}[\label{her-kan-du-legge-in-et-label}]
-        Her skriver du inn den nye statutten som ble vedtatt på genvors...
-    \end{statute}
-    ```
+```latex
+\begin{statute}[\label{her-kan-du-legge-in-et-label}]
+    Her skriver du inn den nye statutten som ble vedtatt på genvors...
+\end{statute}
+```
+
 Akkurat som definition miljøet, vil latex automatisk håndtere formatering og plassering. For å finne definisjonen av miljøet, se etter: `\newenvironment{statute}`
