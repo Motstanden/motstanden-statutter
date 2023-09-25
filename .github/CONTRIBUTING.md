@@ -22,16 +22,16 @@
 
 ## Arbeidsflyt
 1. Lag ny branch
-    ```
+    ```shell
     git checkout -b genvors/vår-2021
     ```
 2. Gjør endringer, commit, repeat.
-    ```
+    ```shell
     git add .
     git commit -m "Legg til definisjon av en kortslutning"
     ```
 3. Publiser branch på GitHub.
-    ```
+    ```shell
     git push -u origin genvors/høst-2021
     ```
 4. Sett opp en pull request med de nye endringer i henhold til [retningslinjene](#publisere-endringer). 
@@ -70,7 +70,7 @@ Alle har lov til å gjøre endringer (på en ny branch) og sette opp en pull req
 ### Installer *Tex live*
 *[Tex live](https://www.tug.org/texlive/)* er en *"latex distribution"*. En latex distribusjon er kort fortalt en samling med programvare som er nødvendig for å kompilere *.tex* filer. Det fins mange latex distribusjoner, men i dette prosjektet bruker vi Tex Live. Tex Live er den mest anerkjente distribusjonen, og er (per 2021) sett på som de facto standard.
 
-Ved å bruke Tex Live sikrer vi at alle jobber i likt miljø. Dermed risikerer man ikke å 'break-e' `.tex` filene for andre som jobber på prosjektet. Dersom du er **latex wizzard**, og har fullstendig peiling på hva du holder på med, kan du velge en annen distribusjon.  
+Ved å bruke Tex Live sikrer vi at alle jobber i likt miljø. Dermed risikerer man ikke å 'break-e' `.tex` filene for andre som jobber på prosjektet. Dersom du er **latex wizard**, og har fullstendig peiling på hva du holder på med, kan du velge en annen distribusjon.  
 
 Last ned Tex Live [her](https://www.tug.org/texlive/acquire-netinstall.html).
 
@@ -89,7 +89,7 @@ Det fins flere måter å redigere latex dokumenter i nettlesere på, men *[overl
 #### Importer fra github
 Dette gjør du ved å klikke på **New Project > Import from GitHub** (se bildet under). Etter dette må du godta at *overleaf* kan koble seg til github brukeren din.
 
-<img src="ReadmeImages\OverleafImportFromGithub.png" height="200"/>
+<img src="images\overleaf-import-from-github.png" height="200"/>
 
 Du er nå klar for å starte å redigere statuttene.
 
@@ -97,23 +97,23 @@ Du er nå klar for å starte å redigere statuttene.
 
 1. **Sørg for at ALLE feilmeldinger er fikset** (se bildet under). **Det er strengt forbudt å publisere .tex filer med feilmeldinger til github!!** Feilmeldinger vil gjøre at .tex filene ikke kan bli kompilert lokalt på datamaskiner. Uhåndterte feilmeldinger vil derfor ødelegge for andre.
 
-    <img src="ReadmeImages\OverleafWarnings.png" height="100"/>
+    <img src="images\overleaf-warning.png" height="100"/>
 
 2. Last ned de 'gamle statuttene'.
-    ``` 
-    git clone https://github.com/Motstanden/statutter.git
+    ```shell
+    git clone https://github.com/Motstanden/motstanden-statutter.git
     ```
 4. Last ned kildekodefilene fra *Overleaf* ved å klikke på: *Menu > Download > Source*.
 3. Klikk på recompile og last ned pdf versjonen.
 5. Kopier kildekodefilene og pdf dokumentet inn i mappen med de 'gamle statuttene'. Sørg for at de nye filene overskriver de gamle filene.
 7. Lag ny branch og legg til endringene.
-    ```
+    ```shell
     git checkout -b redaksjon/fiks-skrivefeil
     git add .
     git commit -m "Fiks diverse skrivefeil i statuttene"
     ```
 6. Publiser til *GitHub*
-    ```
+    ```shell
     git push -u origin redaksjon/fiks-skrivefeil
     ```
 7. Sett opp en pull request til master på *GitHub*.
@@ -122,20 +122,21 @@ Du er nå klar for å starte å redigere statuttene.
 ### Ny definisjon
 Det er laget et egendefinert miljø for definisjoner (punktene i seksjon 1). Syntaksen for miljøet er:
 
-    ```
-    \begin{definition}[\label{her-kan-du-legge-in-et-label}]
-        Her skriver du selve definisjonen....
-    \end{definition}
-    ```
+```latex
+\begin{definition}[\label{her-kan-du-legge-in-et-label}]
+    Her skriver du selve definisjonen....
+\end{definition}
+```
 Latex vil automatisk håndtere formatering og plassering.
 For å finne definisjonen av miljøet, se etter: `\newenvironment{definition}`
 
 ### Ny statutt
 Det er laget et egendefinert miljø statutter (alle punkter som ikke er definisjoner). Syntaksen er identisk som definisjon miljøet:
 
-    ```
-    \begin{statute}[\label{her-kan-du-legge-in-et-label}]
-        Her skriver du inn den nye statutten som ble vedtatt på genvors...
-    \end{statute}
-    ```
+```latex
+\begin{statute}[\label{her-kan-du-legge-in-et-label}]
+    Her skriver du inn den nye statutten som ble vedtatt på genvors...
+\end{statute}
+```
+
 Akkurat som definition miljøet, vil latex automatisk håndtere formatering og plassering. For å finne definisjonen av miljøet, se etter: `\newenvironment{statute}`

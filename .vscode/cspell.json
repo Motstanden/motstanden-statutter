@@ -1,0 +1,32 @@
+{
+    // Version of the setting file.  Always 0.2
+    "version": "0.2",
+
+    // Words that should not be spell corrected.
+    // The word sections should be in alphabetical order.
+    "words": [
+        // Latex specific words
+        "runin",
+        
+        // English words
+
+        // Norwegian words
+        "Elektra",
+        "Elektrastyret",
+        "forohmet",
+        "generalvorssamling",
+        "generalvorssamlingen",
+        "genvors",
+        "høyimpedant",
+        "kortsluttning",
+        "lambo",
+        "noen",
+        "sølvgaffakant",
+        "uforohmet",
+        "uhåndterte",
+        "ølfatle"
+
+    ],
+    "allowCompoundWords": true
+
+}
