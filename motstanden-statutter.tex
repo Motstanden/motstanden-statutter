@@ -13,6 +13,7 @@
 \usepackage{graphicx} % Load images
 \usepackage{caption} % Enables captions in float environments such as minipages
 \usepackage{amsmath} % Improves math environment
+\usepackage{csquotes} % Enables \enquote{}
 
 % ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 %                       Document setup
@@ -42,7 +43,7 @@
         \addtocontents{toc}{\setcounter{tocdepth}{1}}
         \titleformat{\subsection}[runin]{\normalfont}{\textit{\hspace{1pt}\S\hspace{4pt}\thesubsection}}{0pt}{\rule{12pt}{0pt}}{}
         \subsection{}#1
-        \begin{minipage}[t]{0.89\linewidth}
+        \begin{minipage}[t]{0.88\linewidth}
     }
     {
         \end{minipage}
@@ -55,7 +56,7 @@
     {
         \titleformat{\subsubsection}[runin]{\normalfont}{\hspace{1pt}\textit{\S\hspace{5pt}\thesubsubsection}}{0pt}{\rule{4pt}{0pt}}{}
         \subsubsection{}#1
-        \begin{minipage}[t]{0.89\linewidth}
+        \begin{minipage}[t]{0.88\linewidth}
     }
     {
         \end{minipage}
